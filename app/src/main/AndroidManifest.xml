@@ -161,6 +161,16 @@
             android:theme="@style/Theme.Transparent" >
         </activity>
         <activity
+            android:name=".PanicResponderActivity"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="info.guardianproject.panic.action.TRIGGER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="info.guardianproject.securereaderinterface.ViewMediaActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_view_media" >
